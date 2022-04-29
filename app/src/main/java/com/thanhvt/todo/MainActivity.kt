@@ -1,8 +1,12 @@
 package com.thanhvt.todo
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.AlarmClock.EXTRA_MESSAGE
 import android.util.Log
+import android.view.View
+import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,5 +55,13 @@ class MainActivity : AppCompatActivity() {
         val transportations : ArrayList<String> = ArrayList(10)
         transportations.add(0, "mango")
         Log.d("AAA", transportations.toString())
+    }
+
+    fun goToListview(view: View) {
+        val btn = findViewById<Button>(R.id.switchBtn)
+        val intent = Intent(this, ActivityListviewDemo::class.java).apply {
+            putExtra(EXTRA_MESSAGE, btn.text)
+        }
+        startActivity(intent)
     }
 }
