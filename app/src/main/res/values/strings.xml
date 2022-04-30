@@ -1,3 +1,11 @@
 <resources>
   <string name="app_name">TodoApp</string>
+  <string name="calculator_title">Ứng dụng bé học toán</string>
+  <string name="calculator_number_1_hint">Enter first number</string>
+  <string name="calculator_number_2_hint">Enter second number</string>
+  <string name="calculator_plus_btn_text">+</string>
+  <string name="calculator_minus_btn_text">-</string>
+  <string name="calculator_multiply_btn_text">*</string>
+  <string name="calculator_divide_btn_text">/</string>
+  <string name="calculator_switch_btn_text">Calculator</string>
 </resources>

@@ -7,6 +7,7 @@ import android.provider.AlarmClock.EXTRA_MESSAGE
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,6 +58,13 @@ class MainActivity : AppCompatActivity() {
         Log.d("AAA", transportations.toString())
     }
 
+    fun switchToCalculator(view: View) {
+        val intent = Intent(this, CalculatorActivity::class.java).apply {
+            putExtra(EXTRA_MESSAGE, "From main activity")
+        }
+        startActivity(intent)
+    }
+
     fun goToListview(view: View) {
         val btn = findViewById<Button>(R.id.switchBtn)
         val intent = Intent(this, ActivityListviewDemo::class.java).apply {
@@ -64,4 +72,5 @@ class MainActivity : AppCompatActivity() {
         }
         startActivity(intent)
     }
+
 }
