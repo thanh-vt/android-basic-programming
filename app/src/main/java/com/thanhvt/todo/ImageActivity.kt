@@ -3,9 +3,9 @@ package com.thanhvt.todo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class ActivityListviewDemo : AppCompatActivity() {
+class ImageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_listview_demo)
+        setContentView(R.layout.activity_image)
     }
 }

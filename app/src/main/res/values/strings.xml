@@ -7,5 +7,11 @@
   <string name="calculator_minus_btn_text">-</string>
   <string name="calculator_multiply_btn_text">*</string>
   <string name="calculator_divide_btn_text">/</string>
-  <string name="calculator_switch_btn_text">Calculator</string>
+  <string name="calculatorSwitchBtnText">Calculator</string>
+  <string name="dish_image">Dish image</string>
+  <string name="dish_name">Dish name</string>
+  <string name="simple_list_view">Simple List View</string>
+  <string name="advanced_list_view">Advanced List View</string>
+  <string name="demo_image">Demo Image</string>
+  <string name="hello_my_world">Hello My World!</string>
 </resources>

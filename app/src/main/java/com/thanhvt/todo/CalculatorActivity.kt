@@ -4,30 +4,37 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_calculator.*
+import com.thanhvt.todo.databinding.ActivityCalculatorBinding
+
+private const val TAG = "CalculatorActivity"
 
 class CalculatorActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityCalculatorBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_calculator)
+        binding = ActivityCalculatorBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
     }
 
     fun doAdd(view: View) {
-        Log.d("Calculator", "Number 1 = ${number_1.text}, Number 2 = ${number_2.text}")
-        result.text = (number_1.text.toString().toLong() + number_2.text.toString().toLong()).toString()
+        Log.d(TAG, "Number 1 = ${binding.number1.text}, Number 2 = ${binding.number2.text}")
+        binding.result.text = (binding.number1.text.toString().toLong() + binding.number2.text.toString().toLong()).toString()
     }
 
     fun doSubtract(view: View) {
-        Log.d("Calculator", "Number 1 = ${number_1.text}, Number 2 = ${number_2.text}")
-        result.text = (number_1.text.toString().toLong() - number_2.text.toString().toLong()).toString()
+        Log.d(TAG, "Number 1 = ${binding.number1.text}, Number 2 = ${binding.number2.text}")
+        binding.result.text = (binding.number1.text.toString().toLong() - binding.number2.text.toString().toLong()).toString()
     }
     fun doMultiply(view: View) {
-        Log.d("Calculator", "Number 1 = ${number_1.text}, Number 2 = ${number_2.text}")
-        result.text = (number_1.text.toString().toLong() * number_2.text.toString().toLong()).toString()
+        Log.d(TAG, "Number 1 = ${binding.number1.text}, Number 2 = ${binding.number2.text}")
+        binding.result.text = (binding.number1.text.toString().toLong() * binding.number2.text.toString().toLong()).toString()
     }
     fun doDivide(view: View) {
-        Log.d("Calculator", "Number 1 = ${number_1.text}, Number 2 = ${number_2.text}")
-        result.text = (number_1.text.toString().toLong() / number_2.text.toString().toLong()).toString()
+        Log.d(TAG, "Number 1 = ${binding.number1.text}, Number 2 = ${binding.number2.text}")
+        binding.result.text = (binding.number1.text.toString().toLong() / binding.number2.text.toString().toLong()).toString()
     }
 
 

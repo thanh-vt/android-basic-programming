@@ -27,7 +27,7 @@
       android:textSize="35sp"
       />
     <EditText
-      android:id="@+id/number_1"
+      android:id="@+id/number1"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:ems="10"
@@ -36,7 +36,7 @@
       android:importantForAutofill="no"/>
 
     <EditText
-      android:id="@+id/number_2"
+      android:id="@+id/number2"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:ems="10"
@@ -57,7 +57,7 @@
       android:gravity="center_horizontal"
       android:orientation="horizontal">
       <Button
-        android:id="@+id/add_btn"
+        android:id="@+id/addBtn"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -68,7 +68,7 @@
         android:onClick="doAdd"
         />
       <Button
-        android:id="@+id/subtract_btn"
+        android:id="@+id/subtractBtn"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -88,7 +88,7 @@
       android:gravity="center_horizontal"
       android:orientation="horizontal">
       <Button
-        android:id="@+id/multiply_btn"
+        android:id="@+id/multiplyBtn"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -99,7 +99,7 @@
         android:onClick="doMultiply"
         />
       <Button
-        android:id="@+id/divide_btn"
+        android:id="@+id/divideBtn"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
