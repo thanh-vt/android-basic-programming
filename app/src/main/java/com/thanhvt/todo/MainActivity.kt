@@ -7,6 +7,9 @@ import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.thanhvt.todo.databinding.ActivityMainBinding
+import com.thanhvt.todo.worker.ImageWorker
+import com.thanhvt.todo.worker.TaskWorker
+import java.lang.ref.WeakReference
 
 private const val TAG = "MainActivity"
 
@@ -90,6 +93,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
         startActivity(intent)
+    }
+
+    fun doWorkInBackground(view: View) {
+        TaskWorker(WeakReference(binding.workerStatus)).execute()
+        ImageWorker(WeakReference(binding.imgWorkerStatus)).execute("https://photo.techrum.vn/images/2021/08/02/androidd8bb639498106075.png")
     }
 
 }
