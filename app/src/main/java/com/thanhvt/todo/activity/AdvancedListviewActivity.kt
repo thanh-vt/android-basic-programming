@@ -1,7 +1,8 @@
-package com.thanhvt.todo
+package com.thanhvt.todo.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.thanhvt.todo.R
 import com.thanhvt.todo.adapter.DishAdapter
 import com.thanhvt.todo.databinding.ActivityAdvancedListviewBinding
 import com.thanhvt.todo.model.Dish

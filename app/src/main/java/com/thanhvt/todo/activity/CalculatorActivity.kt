@@ -1,4 +1,4 @@
-package com.thanhvt.todo
+package com.thanhvt.todo.activity
 
 import android.os.Bundle
 import android.util.Log

@@ -1,7 +1,8 @@
-package com.thanhvt.todo
+package com.thanhvt.todo.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.thanhvt.todo.R
 
 class ImageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

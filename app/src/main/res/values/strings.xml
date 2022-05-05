@@ -14,4 +14,7 @@
   <string name="advanced_list_view">Advanced List View</string>
   <string name="demo_image">Demo Image</string>
   <string name="hello_my_world">Hello My World!</string>
+  <string name="my_image">My Image</string>
+  <string name="my_image_name">My Image Name</string>
+  <string name="recycler_view">Recycler View</string>
 </resources>

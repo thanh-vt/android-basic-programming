@@ -6,7 +6,7 @@
 
   <data>
 <!--    <import type="android.view.View"/>-->
-    <variable name="handlers" type="com.thanhvt.todo.MainActivity"/>
+    <variable name="handlers" type="com.thanhvt.todo.activity.MainActivity"/>
   </data>
 
 
@@ -62,6 +62,13 @@
         android:layout_height="wrap_content"
         android:text="@string/advanced_list_view"
         android:onClick="@{() -> handlers.switchToDishesList(true)}"
+        />
+      <Button
+        android:id="@+id/recyclerViewSwitchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recycler_view"
+        android:onClick="switchToPhotoList"
         />
       <Button
         android:id="@+id/workerBtn"

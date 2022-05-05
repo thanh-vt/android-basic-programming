@@ -1,4 +1,4 @@
-package com.thanhvt.todo
+package com.thanhvt.todo.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -91,6 +91,13 @@ class MainActivity : AppCompatActivity() {
             Intent(this, SimpleListviewActivity::class.java).apply {
                 putExtra(EXTRA_MESSAGE, "From main activity to Simple Listview")
             }
+        }
+        startActivity(intent)
+    }
+
+    fun switchToPhotoList(view: View) {
+        val intent = Intent(this, RecyclerViewActivity::class.java).apply {
+            putExtra(EXTRA_MESSAGE, "From main activity to Recycler View")
         }
         startActivity(intent)
     }
