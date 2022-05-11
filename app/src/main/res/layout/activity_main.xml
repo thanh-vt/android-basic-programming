@@ -31,51 +31,18 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
-      <Button
-        android:id="@+id/calculator_switch_btn"
-        android:layout_width="wrap_content"
+      <fragment
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:onClick="switchToCalculator"
-        android:text="@string/calculatorSwitchBtnText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        />
-      <Button
-        android:id="@+id/image_switch_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/demo_image"
-        android:onClick="switchToImage"
-        />
-      <Button
-        android:id="@+id/simpleListviewSwitchBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/simple_list_view"
-        android:onClick="@{() -> handlers.switchToDishesList(false)}"
-        />
-      <Button
-        android:id="@+id/advancedListviewSwitchBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/advanced_list_view"
-        android:onClick="@{() -> handlers.switchToDishesList(true)}"
-        />
-      <Button
-        android:id="@+id/recyclerViewSwitchBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/recycler_view"
-        android:onClick="switchToPhotoList"
-        />
+        android:name="com.thanhvt.todo.activity.MyServiceFragment"
+        tools:layout="@layout/fragment_my_service"/>
       <Button
         android:id="@+id/workerBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Work in background"
-        android:onClick="doWorkInBackground"/>
+        android:onClick="doWorkInBackground"
+        android:text="Work in background"/>
       <TextView
         android:id="@+id/workerStatus"
         android:layout_width="wrap_content"
@@ -89,6 +56,63 @@
         android:layout_height="150dp"
         android:background="@drawable/image_border"
         tools:srcCompat="@tools:sample/backgrounds/scenic"/>
+      <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:useDefaultMargins="true"
+        app:columnCount="2"
+        app:orientation="horizontal"
+        app:rowCount="3"
+        tools:columnCount="2"
+        tools:orientation="horizontal"
+        tools:rowCount="3">
+
+        <Button
+          android:id="@+id/calculator_switch_btn"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_column="0"
+          android:layout_row="0"
+          android:onClick="switchToCalculator"
+          android:text="@string/calculatorSwitchBtnText"
+          />
+        <Button
+          android:id="@+id/image_switch_btn"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_column="1"
+          android:layout_row="0"
+          android:onClick="switchToImage"
+          android:text="@string/demo_image"
+          />
+        <Button
+          android:id="@+id/simpleListviewSwitchBtn"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_column="0"
+          android:layout_columnSpan="1"
+          android:layout_row="1"
+          android:onClick="@{() -> handlers.switchToDishesList(false)}"
+          android:text="@string/simple_list_view"/>
+        <Button
+          android:id="@+id/advancedListviewSwitchBtn"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_column="0"
+          android:layout_columnSpan="1"
+          android:layout_row="2"
+          android:onClick="@{() -> handlers.switchToDishesList(true)}"
+          android:text="@string/advanced_list_view"/>
+        <Button
+          android:id="@+id/recyclerViewSwitchBtn"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_column="1"
+          android:layout_row="1"
+          android:onClick="switchToPhotoList"
+          android:text="@string/recycler_view"/>
+      </GridLayout>
+
 
     </LinearLayout>
   </ScrollView>

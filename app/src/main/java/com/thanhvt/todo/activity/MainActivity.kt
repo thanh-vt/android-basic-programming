@@ -1,15 +1,22 @@
 package com.thanhvt.todo.activity
 
+import android.R
+import android.annotation.SuppressLint
+import android.app.ActivityManager
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.provider.AlarmClock.EXTRA_MESSAGE
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.thanhvt.todo.BuildConfig
 import com.thanhvt.todo.databinding.ActivityMainBinding
 import com.thanhvt.todo.worker.ImageWorker
 import com.thanhvt.todo.worker.TaskWorker
 import java.lang.ref.WeakReference
+
 
 private const val TAG = "MainActivity"
 
@@ -23,18 +30,18 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         binding.handlers = this
-        var a : String? = "hello"
+        var a: String? = "hello"
         a = null
-        var b : String = "world"!!
-        val c : String = "Cannot change"
-        var d : Int = 10
-        var e : Int = 15
+        var b: String = "world"!!
+        val c: String = "Cannot change"
+        var d: Int = 10
+        var e: Int = 15
         if (d > e) {
             Log.d(TAG, "d > e")
         } else {
             Log.d(TAG, "d < e")
         }
-        when(b) {
+        when (b) {
             "hello" -> {
                 Log.d(TAG, "b is hello")
             }
@@ -42,9 +49,9 @@ class MainActivity : AppCompatActivity() {
                 Log.d(TAG, "b is world")
             }
         }
-        when(d) {
-            in 1..3 -> Log.d(TAG,"Q1")
-            in 4..6 -> Log.d(TAG,"Q2")
+        when (d) {
+            in 1..3 -> Log.d(TAG, "Q1")
+            in 4..6 -> Log.d(TAG, "Q2")
             in 7..9 -> Log.d(TAG, "Q3")
             else -> Log.d(TAG, "Q4")
         }
@@ -59,11 +66,11 @@ class MainActivity : AppCompatActivity() {
         for (j in 0 until d step 2) {
             Log.d(TAG, "j = $j")
         }
-        val numbers : IntArray = intArrayOf(1,2,3,4,5,6,7,8,9,10)
+        val numbers: IntArray = intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
         d = numbers[0]
-        val fruits : List<String> = listOf("apple", "banana", "mango", "lemon")
+        val fruits: List<String> = listOf("apple", "banana", "mango", "lemon")
         b = fruits[2]
-        val transportations : ArrayList<String> = ArrayList(10)
+        val transportations: ArrayList<String> = ArrayList(10)
         transportations.add(0, "mango")
         Log.d(TAG, transportations.toString())
     }
@@ -82,7 +89,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun switchToDishesList(isAdvanced : Boolean) {
+    fun switchToDishesList(isAdvanced: Boolean) {
         val intent: Intent = if (isAdvanced) {
             Intent(this, AdvancedListviewActivity::class.java).apply {
                 putExtra(EXTRA_MESSAGE, "From main activity to Advanced Listview")
@@ -106,5 +113,6 @@ class MainActivity : AppCompatActivity() {
         TaskWorker(WeakReference(binding.workerStatus)).execute()
         ImageWorker(WeakReference(binding.imgWorkerStatus)).execute("https://photo.techrum.vn/images/2021/08/02/androidd8bb639498106075.png")
     }
+
 
 }

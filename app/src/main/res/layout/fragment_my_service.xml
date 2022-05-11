@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".activity.MyServiceFragment">
+
+  <!-- TODO: Update blank fragment layout -->
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="111dp"
+    app:layout_constraintEnd_toEndOf="@+id/startMyServiceBtn"
+    app:layout_constraintStart_toEndOf="@+id/startMyServiceBtn">
+
+    <Button
+      android:id="@+id/startMyServiceBtn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="7dp"
+      android:layout_marginRight="7dp"
+      android:text="Start My Service"
+      app:layout_constraintBaseline_toBaselineOf="@+id/stopMyServiceBtn"
+      app:layout_constraintEnd_toStartOf="@+id/stopMyServiceBtn"
+      app:layout_constraintHorizontal_chainStyle="packed"
+      app:layout_constraintStart_toStartOf="parent"
+      />
+    <Button
+      android:id="@+id/stopMyServiceBtn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="4dp"
+      android:layout_marginRight="4dp"
+      android:text="Stop My Service"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/startMyServiceBtn"
+      app:layout_constraintTop_toTopOf="parent"
+      />
+    <TextView
+      android:id="@+id/myServiceStatus"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="28dp"
+      app:layout_constraintEnd_toEndOf="@+id/startMyServiceBtn"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toEndOf="@+id/startMyServiceBtn"
+      app:layout_constraintTop_toBottomOf="@+id/startMyServiceBtn"/>
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
