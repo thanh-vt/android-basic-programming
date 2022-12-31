@@ -109,9 +109,18 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun switchToWebview(view: View) {
+        val intent = Intent(this, WebviewActivity::class.java).apply {
+            putExtra(EXTRA_MESSAGE, "From main activity to Webview View")
+        }
+        startActivity(intent)
+    }
+
     fun doWorkInBackground(view: View) {
-        TaskWorker(WeakReference(binding.workerStatus)).execute()
-        ImageWorker(WeakReference(binding.imgWorkerStatus)).execute("https://photo.techrum.vn/images/2021/08/02/androidd8bb639498106075.png")
+        TaskWorker(WeakReference(binding.workerStatus))
+            .execute()
+        ImageWorker(WeakReference(binding.imgWorkerStatus))
+            .execute("https://nintendoeverything.com/wp-content/uploads/pokemon-adventures-anniversary.jpg")
     }
 
 

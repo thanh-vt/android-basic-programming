@@ -37,12 +37,6 @@ class RecyclerViewActivity : AppCompatActivity() {
 
         myExecutor.execute {
             // Do something in background (back-end process)
-
-
-        }
-
-        myHandler.post {
-            // Do something in UI (front-end process)
             val content = HttpUtil.readAsString("https://reqres.in/api/users?page=0")
             val response = JSONObject(content)
             val arrays = response.get("data") as JSONArray
@@ -57,7 +51,10 @@ class RecyclerViewActivity : AppCompatActivity() {
                 )
                 users.add(photo)
             }
-            userAdapter.notifyDataSetChanged()
+            myHandler.post {
+                // Do something in UI (front-end process)
+                userAdapter.notifyDataSetChanged()
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.thanhvt.todo.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -18,16 +19,11 @@ import com.thanhvt.todo.model.Dish
  * @author pysga
  * @since 1.0
  **/
-class DishAdapter(var context: Context, var dishes: ArrayList<Dish>): BaseAdapter() {
+class DishAdapter(private var context: Context,private var dishes: ArrayList<Dish>): BaseAdapter() {
 
     class ViewHolder(row: View) {
-        var textviewDishName: TextView
-        var imageviewDishUri: ImageView
-
-        init {
-            textviewDishName = row.findViewById(R.id.dishName) as TextView
-            imageviewDishUri = row.findViewById(R.id.dishImg) as ImageView
-        }
+        var textviewDishName: TextView = row.findViewById(R.id.dishName) as TextView
+        var imageviewDishUri: ImageView = row.findViewById(R.id.dishImg) as ImageView
     }
     override fun getCount(): Int {
         return dishes.size
@@ -41,6 +37,7 @@ class DishAdapter(var context: Context, var dishes: ArrayList<Dish>): BaseAdapte
         return position.toLong()
     }
 
+    @SuppressLint("InflateParams")
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val view: View?
         val viewHolder: ViewHolder

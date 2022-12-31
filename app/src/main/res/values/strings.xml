@@ -1,22 +1,32 @@
 <resources>
-  <string name="app_name">TodoApp</string>
-  <string name="calculator_title">Ứng dụng bé học toán</string>
+  <string name="app_name">Demo App</string>
+  <string name="calculator_title">Demo Calculator</string>
   <string name="calculator_number_1_hint">Enter first number</string>
   <string name="calculator_number_2_hint">Enter second number</string>
   <string name="calculator_plus_btn_text">+</string>
   <string name="calculator_minus_btn_text">-</string>
   <string name="calculator_multiply_btn_text">*</string>
   <string name="calculator_divide_btn_text">/</string>
-  <string name="calculatorSwitchBtnText">Calculator</string>
+  <string name="calculator_btn">Demo Calculator</string>
   <string name="dish_image">Dish image</string>
   <string name="dish_name">Dish name</string>
-  <string name="simple_list_view">Simple List View</string>
-  <string name="advanced_list_view">Advanced List View</string>
+  <string name="simple_list_view">Demo Simple List View</string>
+  <string name="advanced_list_view">Demo Advanced List View</string>
   <string name="demo_image">Demo Image</string>
-  <string name="hello_my_world">Hello My World!</string>
-  <string name="my_image">My Image</string>
+  <string name="my_image">Demo My Image</string>
   <string name="my_image_name">My Image Name</string>
-  <string name="recycler_view">Recycler View</string>
-  <!-- TODO: Remove or change this placeholder text -->
-  <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="recycler_view">Demo Recycler View</string>
+  <string name="webview_btn">Demo Webview</string>
+  <string name="user_full_name">%1$s %2$s</string>
+  <!-- Strings used for fragments for navigation -->
+  <string name="first_fragment_label">First Fragment</string>
+  <string name="second_fragment_label">Second Fragment</string>
+  <string name="next">Next</string>
+  <string name="previous">Previous</string>
+
+  <string name="hello_first_fragment">Hello first fragment</string>
+  <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+  <string name="work_in_background_btn">Work in background</string>
+  <string name="progress_txt">Progress:</string>
+  <string name="worker_status_desc">Worker Status</string>
 </resources>

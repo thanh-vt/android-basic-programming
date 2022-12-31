@@ -12,10 +12,11 @@ import com.thanhvt.todo.R
 import com.thanhvt.todo.model.User
 
 
-class UserAdapter(private val context: Context, private val users: List<User>) : RecyclerView.Adapter<UserAdapter.ViewHolder>() {
+class UserAdapter(private val context: Context, private val users: List<User>) :
+    RecyclerView.Adapter<UserAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-         val imageView: ImageView = itemView.findViewById(R.id.photoThumbnail)
+        val imageView: ImageView = itemView.findViewById(R.id.photoThumbnail)
         val textView: TextView = itemView.findViewById(R.id.photoTitle)
     }
 
@@ -32,7 +33,7 @@ class UserAdapter(private val context: Context, private val users: List<User>) :
             .placeholder(R.drawable.image_border)
             .error(R.drawable.default_img)
             .into(holder.imageView)
-        holder.textView.text = "${user.firstName} ${user.lastName}"
+        holder.textView.text = context.getString(R.string.user_full_name, user.firstName, user.lastName)
     }
 
     override fun getItemCount(): Int {
