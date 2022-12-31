@@ -21,7 +21,12 @@
       android:gravity="center"
       tools:layout_editor_absoluteX="69dp"
       tools:layout_editor_absoluteY="106dp">
-
+      <fragment
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.thanhvt.todo.activity.MyServiceFragment"
+        tools:layout="@layout/fragment_my_service"/>
       <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
