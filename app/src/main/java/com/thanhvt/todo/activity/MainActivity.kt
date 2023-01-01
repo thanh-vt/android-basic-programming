@@ -1,17 +1,11 @@
 package com.thanhvt.todo.activity
 
-import android.R
-import android.annotation.SuppressLint
-import android.app.ActivityManager
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
 import android.provider.AlarmClock.EXTRA_MESSAGE
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.thanhvt.todo.BuildConfig
 import com.thanhvt.todo.databinding.ActivityMainBinding
 import com.thanhvt.todo.worker.ImageWorker
 import com.thanhvt.todo.worker.TaskWorker
@@ -122,6 +116,7 @@ class MainActivity : AppCompatActivity() {
         ImageWorker(WeakReference(binding.imgWorkerStatus))
             .execute("https://nintendoeverything.com/wp-content/uploads/pokemon-adventures-anniversary.jpg")
     }
+
 
 
 }

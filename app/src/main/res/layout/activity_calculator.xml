@@ -31,6 +31,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:ems="10"
+      android:saveEnabled="false"
       android:inputType="number"
       android:hint="@string/calculator_number_1_hint"
       android:importantForAutofill="no"/>
@@ -40,6 +41,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:ems="10"
+      android:saveEnabled="false"
       android:inputType="number"
       android:hint="@string/calculator_number_2_hint"
       android:importantForAutofill="no"/>
@@ -47,6 +49,8 @@
       android:id="@+id/result"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:saveEnabled="false"
+      android:freezesText="false"
       android:layout_gravity="center"
       android:textColor="#3F51B5"
       android:textSize="50sp"/>
@@ -112,6 +116,13 @@
         android:onClick="doDivide"
         />
     </LinearLayout>
+    <Button
+      android:id="@+id/button2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/dialog_start_game"
+      android:onClick="confirmStartGame"
+      />
 
   </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

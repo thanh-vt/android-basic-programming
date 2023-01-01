@@ -7,6 +7,9 @@
   <string name="calculator_minus_btn_text">-</string>
   <string name="calculator_multiply_btn_text">*</string>
   <string name="calculator_divide_btn_text">/</string>
+  <string name="dialog_start_game">Start Game?</string>
+  <string name="start">Start</string>
+  <string name="cancel">Cancel</string>
   <string name="calculator_btn">Demo Calculator</string>
   <string name="dish_image">Dish image</string>
   <string name="dish_name">Dish name</string>
