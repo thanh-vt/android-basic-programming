@@ -1,11 +1,14 @@
 package com.thanhvt.todo.activity
 
 import android.content.Intent
+import android.content.IntentFilter
+import android.net.ConnectivityManager.CONNECTIVITY_ACTION
 import android.os.Bundle
 import android.provider.AlarmClock.EXTRA_MESSAGE
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.thanhvt.todo.broadcast.MyReceiver
 import com.thanhvt.todo.databinding.ActivityMainBinding
 import com.thanhvt.todo.worker.ImageWorker
 import com.thanhvt.todo.worker.TaskWorker
@@ -17,6 +20,9 @@ private const val TAG = "MainActivity"
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+
+    private val filter = IntentFilter(CONNECTIVITY_ACTION)
+    private val myReceiver = MyReceiver()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -67,6 +73,13 @@ class MainActivity : AppCompatActivity() {
         val transportations: ArrayList<String> = ArrayList(10)
         transportations.add(0, "mango")
         Log.d(TAG, transportations.toString())
+
+        registerReceiver(myReceiver, filter)
+    }
+
+    override fun onStop() {
+        super.onStop()
+        unregisterReceiver(myReceiver)
     }
 
     fun switchToCalculator(view: View) {
