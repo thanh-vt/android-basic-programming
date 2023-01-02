@@ -6,6 +6,8 @@ import android.widget.ArrayAdapter
 import com.thanhvt.todo.databinding.ActivityCalculatorBinding
 import com.thanhvt.todo.databinding.ActivitySimpleListviewBinding
 
+private const val TAG = "SimpleListviewActivity"
+
 class SimpleListviewActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySimpleListviewBinding

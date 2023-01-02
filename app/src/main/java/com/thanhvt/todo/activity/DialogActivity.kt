@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.thanhvt.todo.R
 import com.thanhvt.todo.databinding.ActivityDialogBinding
 
+private const val TAG = "DialogActivity"
+
 /**
  *
  *

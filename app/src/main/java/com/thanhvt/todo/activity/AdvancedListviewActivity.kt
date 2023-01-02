@@ -7,6 +7,8 @@ import com.thanhvt.todo.adapter.DishAdapter
 import com.thanhvt.todo.databinding.ActivityAdvancedListviewBinding
 import com.thanhvt.todo.model.Dish
 
+private const val TAG = "AdvancedListviewActivity"
+
 class AdvancedListviewActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAdvancedListviewBinding
