@@ -1,4 +1,4 @@
-package com.thanhvt.todo.activity
+package com.thanhvt.todo.service
 
 import android.app.*
 import android.content.Context
@@ -10,6 +10,7 @@ import android.os.IBinder
 import androidx.core.app.NotificationCompat
 import com.thanhvt.todo.BuildConfig
 import com.thanhvt.todo.R
+import com.thanhvt.todo.activity.MainActivity
 
 const val ACTION_STOP = "${BuildConfig.APPLICATION_ID}.stop"
 

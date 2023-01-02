@@ -77,8 +77,8 @@ class MainActivity : AppCompatActivity() {
         registerReceiver(myReceiver, filter)
     }
 
-    override fun onStop() {
-        super.onStop()
+    override fun onDestroy() {
+        super.onDestroy()
         unregisterReceiver(myReceiver)
     }
 

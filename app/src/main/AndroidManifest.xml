@@ -27,7 +27,8 @@
     </activity>
     <activity android:name=".activity.DialogActivity"
       android:excludeFromRecents="true" android:theme="@style/Theme.AppCompat.Dialog"/>
-    <activity android:name=".activity.MainActivity">
+    <activity android:name=".activity.MainActivity"
+      android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
 
@@ -37,7 +38,7 @@
     <service
       android:enabled="true"
       android:exported="false"
-      android:name=".activity.MyService">
+      android:name=".service.MyService">
     </service>
   </application>
 

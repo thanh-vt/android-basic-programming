@@ -25,7 +25,7 @@
         android:id="@+id/fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:name="com.thanhvt.todo.activity.MyServiceFragment"
+        android:name="com.thanhvt.todo.fragment.MyServiceFragment"
         tools:layout="@layout/fragment_my_service"/>
       <TextView
         android:id="@+id/textView"

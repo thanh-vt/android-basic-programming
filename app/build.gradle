@@ -1,16 +1,17 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    compileSdkVersion 33
+    buildToolsVersion "33.0.0"
 
     defaultConfig {
         applicationId "com.thanhvt.todo"
-        minSdkVersion 16
-        targetSdkVersion 30
+        minSdkVersion 21
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
 
@@ -35,6 +36,11 @@ android {
     buildFeatures {
         viewBinding true
         dataBinding true
+        compose true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.3.2"
     }
 }
 
@@ -53,4 +59,33 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    // jetpack compose deps
+    def composeBom = platform('androidx.compose:compose-bom:2022.12.00')
+    implementation composeBom
+    androidTestImplementation composeBom
+
+    // Material Design 3
+    implementation 'androidx.compose.material3:material3'
+
+    // Android Studio Preview support for compose
+    implementation 'androidx.compose.ui:ui-tooling-preview'
+    debugImplementation 'androidx.compose.ui:ui-tooling'
+
+    // UI Tests for compose
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
+    debugImplementation 'androidx.compose.ui:ui-test-manifest'
+
+    // Optional - Add full set of material icons
+    implementation 'androidx.compose.material:material-icons-extended'
+    // Optional - Add window size utils
+    implementation 'androidx.compose.material3:material3-window-size-class'
+
+    // Optional - Integration with activities
+    implementation 'androidx.activity:activity-compose:1.5.1'
+
+    // GIF compose support
+    implementation("io.coil-kt:coil:2.0.0-rc02")
+    implementation("io.coil-kt:coil-gif:2.0.0-rc02")
+    implementation("io.coil-kt:coil-compose:2.0.0-rc02")
 }

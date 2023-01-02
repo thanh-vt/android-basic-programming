@@ -8,7 +8,7 @@
   <fragment
     android:id="@+id/FirstFragment"
     android:label="@string/first_fragment_label"
-    android:name="com.thanhvt.todo.activity.FirstFragment"
+    android:name="com.thanhvt.todo.fragment.FirstFragment"
     tools:layout="@layout/fragment_first">
 
     <action
@@ -18,7 +18,7 @@
   <fragment
     android:id="@+id/SecondFragment"
     android:label="@string/second_fragment_label"
-    android:name="com.thanhvt.todo.activity.SecondFragment"
+    android:name="com.thanhvt.todo.fragment.SecondFragment"
     tools:layout="@layout/fragment_second">
 
     <action

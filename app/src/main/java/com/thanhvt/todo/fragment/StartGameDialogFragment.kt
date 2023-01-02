@@ -1,4 +1,4 @@
-package com.thanhvt.todo.activity
+package com.thanhvt.todo.fragment
 
 import android.app.AlertDialog
 import android.app.Dialog

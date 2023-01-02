@@ -1,4 +1,4 @@
-package com.thanhvt.todo.activity
+package com.thanhvt.todo.fragment
 
 import android.annotation.SuppressLint
 import android.app.ActivityManager
@@ -11,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.thanhvt.todo.BuildConfig
+import com.thanhvt.todo.service.MyService
 import com.thanhvt.todo.databinding.FragmentMyServiceBinding
 
 // TODO: Rename parameter arguments, choose names that match
